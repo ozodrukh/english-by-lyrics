@@ -1,0 +1,70 @@
+@import "mixins";
+@import "global";
+
+@card_shadow_color: rgba(58, 58, 58, 0.1);
+
+.form-control:focus{
+  border-color: @accent-color;
+}
+
+.navbar {
+  background-color: @primary-color;
+  .navbar-brand {
+    .set-bootstrap-link-properties(#fff, @lighten: false)
+  }
+}
+
+.btn-primary {
+  .set-bootstrap-button-properties(#fff, @primary-color)
+}
+
+.btn-accent {
+  .set-bootstrap-button-properties(lighten(#000, 20%), @accent-color)
+}
+
+.card {
+  &.card-block {
+    .add-border-radius(2px);
+    .add-box-shadow(1px, 1px, 2px, 1px, @card_shadow_color)
+  }
+}
+
+.dropdown-menu{
+  .add-border-radius(1px)
+}
+
+.generate-shadows(8);
+
+.set-bootstrap-link-properties(@text-color, @lighten: true, @by: 10%) {
+  color: @text-color;
+  &:active, &:hover, &:focus {
+    & when (@lighten = true) {
+      color: lighten(@text-color, @by);
+    }
+
+    & when (@lighten = false) {
+      color: darken(@text-color, @by);
+    }
+  }
+}
+
+.set-bootstrap-button-properties(@text-color, @primary-color, @lightenBy: 10%) {
+  color: @text-color;
+  background-color: @primary-color;
+  border-color: @primary-color;
+
+  &:active, &:hover, &:focus, &:active:focus {
+    color: @text-color;
+    background-color: lighten(@primary-color, @lightenBy);
+    border-color: lighten(@primary-color, @lightenBy);
+  }
+}
+
+.generate-shadows(@n, @i: 1) when (@i =< @n) {
+  @shadow-spreading: (@i * 2px);
+  .shadow-@{shadow-spreading} {
+    .add-box-shadow(2px, 2px, @shadow-spreading, @shadow-spreading, @card_shadow_color);
+  }
+  .generate-shadows(@n, @i + 1);
+}
+

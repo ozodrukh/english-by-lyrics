@@ -1,0 +1,25 @@
+@import "mixins";
+@import "global";
+@import "bootstrap-theme";
+
+.container-fluid {
+  margin-top: 64px;
+
+  .row:first-child {
+    margin-top: @def_margin * 2;
+  }
+}
+
+.drop-dialog-wrapper div[data-action=difficulty-settings-dialog] {
+  visibility: visible !important;
+}
+
+.preference-label{
+  font-size: 12px;
+  color: lighten(#000, 40%);
+  text-transform: uppercase;
+}
+
+.preference-inline-margin{
+  margin-left: @def_margin * 3;
+}

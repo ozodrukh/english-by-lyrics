@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lyrics</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="css/libraries/nouislider/nouislider.min.css"/>
+    <link rel="stylesheet" href="css/libraries/nouislider/nouislider.pips.css"/>
+    <link rel="stylesheet" href="css/libraries/nouislider/nouislider.tooltips.css"/>
+    <link rel="stylesheet" href="css/libraries/snackbar.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/lyrics-view.css"/>
+    <link rel="stylesheet" href="css/material-icons-styling.css"/>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+    <a class="navbar-brand" href="#">LyricsSubstitute</a>
+    <ul class="nav navbar-nav float-xs-right">
+        <li class="nav-item">
+            <button class="nav-link btn btn-accent disabled" data-action="validate-result" href="#">
+                <i class="material-icons md-dark md-18 md-nav-link">done</i> Check
+            </button>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-action="difficulty-settings" href="#">
+                <i class="material-icons md-dark md-18 md-nav-link">settings</i> Difficulty
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card card-block">
+                <h3 class="card-title">Improve your Listening</h3>
+                <p class="card-text">
+                    Here is new way to learn it.<br/>
+                    Put lyrics and fill blank spaces, and check out how well
+                    did you get it :)</p>
+                <hr/>
+                <a href="http://genius.com" class="btn btn-primary">Find out Lyrics</a>
+            </div>
+        </div>
+        <div class="lyrics-container col-lg-6">
+            <div class="form-group">
+                <label for="lyricsInput">Lyrics input [x]</label>
+                <textarea id="lyricsInput" type="text" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+
+<div style="width: 400px;" data-action="difficulty-settings-dialog" class="card card-block shadow-8px">
+    <h3 class="card-title">Substitution difficulty</h3>
+    <hr/>
+    <div class="difficulty-preferences-form">
+        <span class="preference-label">per line substitution</span>
+        <div data-action=difficulty-range class="preference-inline-margin btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Every
+            </button>
+            <div class="shadow-2px dropdown-menu">
+                <a class="dropdown-item">1 line</a>
+                <a class="dropdown-item">2 line</a>
+                <a class="dropdown-item">3 line</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="js/libraries/tether.min.js"></script>
+<script src="js/libraries/drop.min.js"></script>
+<script src="js/libraries/bootstrap.min.js"></script>
+<script src="js/libraries/snackbar.js"></script>
+<script src="js/libraries/sprintf.js"></script>
+<script src="js/libraries/nouislider.min.js"></script>
+<script src="js/libraries/char.func.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

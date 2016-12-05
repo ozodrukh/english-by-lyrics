@@ -1,0 +1,19 @@
+.add-border-radius(@radius) {
+  -webkit-border-radius: @radius;;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.add-box-shadow(@x, @y, @blur, @spread, @color) {
+  -webkit-box-shadow: @x @y @blur @spread @color;
+  -moz-box-shadow: @x @y @blur @spread @color;
+  box-shadow: none @x @y @blur @spread @color;
+}
+
+.add-transition-effect(@propertyName, @time){
+  -webkit-transition: @propertyName @time;
+  -moz-transition: @propertyName @time;
+  -ms-transition: @propertyName @time;
+  -o-transition: @propertyName @time;
+  transition: @propertyName @time;
+}

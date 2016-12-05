@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TypeScriptCompiler">
+    <option name="isCompilerEnabled" value="true" />
+    <option name="typeScriptServiceDirectory" value="$USER_HOME$/.npm/typescript/2.0.10/package 2/lib" />
+    <option name="nodeInterpreterTextField" value="/usr/local/Cellar/node/5.3.0/bin/node" />
+    <option name="useConfig" value="true" />
+    <option name="versionType" value="SERVICE_DIRECTORY" />
+  </component>
+</project>

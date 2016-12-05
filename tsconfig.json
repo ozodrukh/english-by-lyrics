@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "lib": [
+      "dom",
+      "es6",
+      "scripthost",
+      "es2016"
+    ],
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outFile": "js/main.js",
+    "sourceMap": true
+  },
+  "include": [
+    "js/*.ts"
+  ],
+  "exclude": [
+    "js/libraries"
+  ]
+}

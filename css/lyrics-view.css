@@ -1,0 +1,67 @@
+label[for=lyricsInput] {
+  background-color: #fffef1;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+label[for=lyricsInput]:hover {
+  background-color: #fffbd8;
+}
+.lyrics__input-invisible {
+  display: none;
+  -webkit-transition: display 0.2 ease;
+  -moz-transition: display 0.2 ease;
+  -ms-transition: display 0.2 ease;
+  -o-transition: display 0.2 ease;
+  transition: display 0.2 ease;
+}
+#lyricsInput {
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.5em;
+}
+.lyrics__output-area {
+  width: 600px;
+  margin: 0 auto;
+}
+.lyrics__line {
+  padding: 8px;
+  display: block;
+}
+.lyrics__line:hover {
+  background-color: #fffef1;
+  -webkit-transition: background-color 0.22s linear;
+  -moz-transition: background-color 0.22s linear;
+  -ms-transition: background-color 0.22s linear;
+  -o-transition: background-color 0.22s linear;
+  transition: background-color 0.22s linear;
+}
+.lyrics__line:hover .lyrics__word-input {
+  background-color: #fffef1;
+}
+.lyrics__word-input {
+  border: none;
+  width: 80px;
+  border-bottom: 1px solid #cccccc;
+  margin: 0 4px;
+  padding: 0 4px;
+  text-align: center;
+}
+.lyrics__word-input:focus {
+  outline: none;
+  background-color: #fffef1;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all 0.22s linear;
+  -moz-transition: all 0.22s linear;
+  -ms-transition: all 0.22s linear;
+  -o-transition: all 0.22s linear;
+  transition: all 0.22s linear;
+}
+.lyrics__word-input.lyrics__word-unmatch {
+  background-color: #FFEBEE;
+}
+.lyrics__line-break {
+  display: block;
+  margin: 16px 0;
+}
+.lyrics__line-comment {
+  background-color: #f2f2f2;
+}
